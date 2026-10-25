@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aarav aur Meera - wedding invite sample by Liveframe Studios</title>
+<meta name="description" content="Aarav and Meera’s wedding: events, countdown and RSVP. A sample invite site by Liveframe Studios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7efe2;--paper:#fffaf1;--ink:#3a1416;--soft:#6e4a44;--red:#a3161f;--marigold:#f2a23a;--gold:#b88a3e;--line:rgba(58,20,22,.16);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#3a1416}}
+:root[data-theme="dark"]{--ink:#3a1416}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.7 Mukta,system-ui,sans-serif;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.H{font-family:"Rozha One","Tiro Devanagari Hindi",serif;font-weight:400}
+#petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px;position:relative}
+.arc{width:min(860px,96vw);height:auto;overflow:visible}
+.arc path.th{fill:none;stroke:var(--red);stroke-width:2.2;stroke-linecap:round}
+.arc text{font:400 46px "Tiro Devanagari Hindi",serif;fill:var(--ink)}
+.names{font:400 clamp(64px,13vw,170px)/1 "Rozha One",serif;margin:-10px 0 0;color:var(--red)}
+.names span{color:var(--gold);font-size:.45em;vertical-align:middle;margin:0 .15em}
+.en{letter-spacing:.3em;text-transform:uppercase;font-size:14px;color:var(--soft);margin:18px 0 0}
+.date{font:400 clamp(22px,3vw,30px) "Tiro Devanagari Hindi",serif;margin-top:22px}
+.scroll{position:absolute;bottom:26px;font-size:13px;color:var(--soft);letter-spacing:.2em;text-transform:uppercase}
+.verse{height:240vh;position:relative}
+.verse .st{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.verse svg{position:absolute;inset:0;width:100%;height:100%}
+.verse path{fill:none;stroke:var(--red);stroke-width:2}
+.lines{position:relative;text-align:center;font:400 clamp(40px,7vw,96px)/1.3 "Tiro Devanagari Hindi",serif}
+.lines .w{display:inline-block;opacity:.08;transform:translateY(14px);margin:0 .14em}
+.lines small{display:block;font:italic 400 18px Mukta,sans-serif;color:var(--soft);margin-top:24px;letter-spacing:.04em;opacity:0}
+section.s{padding:clamp(80px,10vw,140px) 0}
+h2{font:400 clamp(44px,7vw,84px)/1.1 "Rozha One",serif;text-align:center;margin:0;color:var(--red)}
+.sub{text-align:center;color:var(--soft);margin:4px 0 48px;letter-spacing:.2em;text-transform:uppercase;font-size:13px}
+.dial{width:min(320px,76vw);aspect-ratio:1;margin:0 auto;position:relative;border-radius:50%;background:var(--paper);border:2px solid var(--ink);box-shadow:0 20px 50px rgba(58,20,22,.12)}
+.dial i{position:absolute;left:50%;top:50%;width:2px;height:45%;background:var(--ink);transform-origin:50% 0}
+.dial .tk{position:absolute;inset:0}
+.dial .hand{position:absolute;left:50%;bottom:50%;width:3px;height:42%;margin-left:-1.5px;background:var(--red);transform-origin:50% 100%;border-radius:3px}
+.dial .hub{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;border-radius:50%;background:var(--red)}
+.cd{display:flex;justify-content:center;gap:clamp(18px,5vw,56px);margin-top:36px;text-align:center}
+.cd b{display:block;font:400 clamp(40px,7vw,72px)/1 "Rozha One",serif;font-variant-numeric:tabular-nums}
+.cd span{font-size:14px;color:var(--soft)}
+.ev{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.e{background:var(--paper);border:1.5px solid var(--line);border-radius:22px;padding:26px;position:relative;overflow:hidden;transition:transform .3s}
+.e:hover{transform:translateY(-6px)}
+.e::before{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:var(--c);opacity:.25}
+.e h3{font:400 40px/1.1 "Rozha One",serif;margin:0;color:var(--red)}
+.e .t{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.e p{margin:12px 0 0}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s cubic-bezier(.2,.75,.1,1);transition-delay:var(--d,0s)}.rv.on{opacity:1;transform:none}
+form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:760px;margin:0 auto;background:var(--paper);border:1.5px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,40px)}
+label{display:grid;gap:6px;font-size:15px;font-weight:500}
+input,select{min-height:50px;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--ink);padding:0 14px;font:inherit}
+fieldset{grid-column:1/-1;border:0;padding:0;margin:0;display:flex;gap:10px;flex-wrap:wrap}
+legend{font-weight:500;font-size:15px;margin-bottom:8px}
+.chk{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:44px}
+.chk input{min-height:auto;width:18px;height:18px;accent-color:var(--red)}
+.btn{min-height:52px;padding:0 28px;border-radius:999px;border:0;background:var(--red);color:#fff;font:700 16px Mukta,sans-serif;cursor:pointer}
+.err{grid-column:1/-1;margin:0;min-height:22px;color:var(--red);font-weight:500}
+footer{text-align:center;padding:40px 20px 60px;color:var(--soft)}
+footer .H{font-size:30px;color:var(--red);display:block}
+@media (prefers-reduced-motion: reduce){.rv{transition:none;opacity:1;transform:none}#petals{display:none}}
+</style>
+</head>
+<body>
+<canvas id="petals" aria-hidden="true"></canvas>
+<main>
+<section class="hero" id="top">
+<svg class="arc" viewBox="0 0 860 220" aria-hidden="true"><path id="cv" class="th" d="M30 190 C 230 30, 630 30, 830 190"/><text><textPath id="tp" href="#cv" startOffset="50%" text-anchor="middle">आप सादर आमंत्रित हैं</textPath></text></svg>
+<h1 class="names" aria-label="Aarav and Meera">आरव <span>और</span> मीरा</h1>
+<p class="en">Aarav weds Meera</p>
+<p class="date">[१२ दिसंबर २०२६] &nbsp;·&nbsp; [शहर]</p>
+<span class="scroll">Scroll</span>
+</section>
+<section class="verse" aria-label="A couplet">
+<div class="st">
+<svg viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true"><path id="thread" d="M-20 520 C 200 380, 380 620, 520 420 S 820 120, 1020 160"/></svg>
+<div class="lines" id="lines" lang="hi"><span class="w">दो</span><span class="w">दिल,</span><span class="w">एक</span><span class="w">सफ़र,</span><br><span class="w">एक</span><span class="w">वादा,</span><span class="w">हर</span><span class="w">पहर।</span><small lang="en">Two hearts, one journey. One promise, every hour.</small></div>
+</div>
+</section>
+<section class="s"><div class="wrap">
+<h2 class="rv">शुभ घड़ी</h2><p class="sub rv">Counting down</p>
+<div class="dial rv" aria-hidden="true"><div class="tk" id="tk"></div><div class="hand" id="hand"></div><div class="hub"></div></div>
+<div class="cd rv" role="timer" aria-live="off"><div><b id="dd">00</b><span>दिन / days</span></div><div><b id="hh">00</b><span>घंटे / hours</span></div><div><b id="mm">00</b><span>मिनट / minutes</span></div></div>
+</div></section>
+<section class="s" style="padding-top:0"><div class="wrap">
+<h2 class="rv">उत्सव</h2><p class="sub rv">The celebrations</p>
+<div class="ev">
+<div class="e rv" style="--c:#f2c94c"><span class="t">[10 Dec], 11 am</span><h3>हल्दी</h3><p>Haldi at [venue]. Wear yellow.</p></div>
+<div class="e rv" style="--c:#4caf50;--d:.08s"><span class="t">[10 Dec], 5 pm</span><h3>मेहंदी</h3><p>Mehendi and music at [venue].</p></div>
+<div class="e rv" style="--c:#e05aa0;--d:.16s"><span class="t">[11 Dec], 7 pm</span><h3>संगीत</h3><p>Sangeet night at [venue]. Bring your dance shoes.</p></div>
+<div class="e rv" style="--c:#a3161f;--d:.24s"><span class="t">[12 Dec], 7 pm</span><h3>फेरे</h3><p>Baraat, varmala and pheras at [venue].</p></div>
+</div>
+</div></section>
+<section class="s" id="rsvp" style="padding-top:0"><div class="wrap">
+<h2 class="rv">आइएगा ज़रूर</h2><p class="sub rv">Please RSVP</p>
+<form id="f" novalidate class="rv">
+<label>Your name<input name="name" autocomplete="name"></label>
+<label>Guests<select name="n"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+<fieldset><legend>Joining for</legend><label class="chk"><input type="checkbox" value="Haldi">Haldi</label><label class="chk"><input type="checkbox" value="Mehendi">Mehendi</label><label class="chk"><input type="checkbox" value="Sangeet">Sangeet</label><label class="chk"><input type="checkbox" value="Pheras" checked>Pheras</label></fieldset>
+<p class="err" id="err" role="alert"></p>
+<div><button class="btn" type="submit">RSVP on WhatsApp</button></div>
+</form>
+</div></section>
+</main>
+<footer><span class="H">सप्रेम</span>With love, the [Mehra] and [Kapoor] families<br><small>A sample invite site. Built by Liveframe Studios.</small></footer>
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script>
+const WA="910000000000",WEDDING=new Date('2026-12-12T19:00:00+05:30');
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+gsap.registerPlugin(ScrollTrigger);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});$$('.rv').forEach(el=>io.observe(el));
+/* hero thread + text */
+const cv=$('#cv'),L=cv.getTotalLength();cv.style.strokeDasharray=L;cv.style.strokeDashoffset=reduce?0:L;
+if(!reduce){gsap.to(cv,{strokeDashoffset:0,duration:2.2,ease:'power2.inOut',delay:.2});gsap.fromTo('#tp',{attr:{startOffset:'-30%'}},{attr:{startOffset:'50%'},duration:2.4,ease:'power3.out',delay:.5});gsap.from('.names',{y:40,opacity:0,duration:1.2,delay:1.4,ease:'power3.out'});gsap.from('.en,.date',{opacity:0,duration:1,delay:2,stagger:.2})}
+/* verse */
+const th=$('#thread'),TL=th.getTotalLength();th.style.strokeDasharray=TL;th.style.strokeDashoffset=TL;
+const vt=gsap.timeline({scrollTrigger:{trigger:'.verse',start:'top top',end:'bottom bottom',scrub:true}});
+vt.to(th,{strokeDashoffset:0,ease:'none',duration:1},0).to('#lines .w',{opacity:1,y:0,stagger:.1,duration:.3,ease:'power2.out'},0).to('#lines small',{opacity:1,duration:.2},.85);
+/* dial */
+const tk=$('#tk');for(let i=0;i<60;i++){const s=document.createElement('i');s.style.height=i%5?'4%':'8%';s.style.top='4%';s.style.transform=`translateX(-50%) rotate(${i*6}deg)`;s.style.transformOrigin='50% 1150%';s.style.opacity=i%5?.4:1;tk.appendChild(s)}
+$$('#tk i').forEach(i=>{i.style.transformOrigin=`50% calc(${(.5-.04)*100/(i.style.height==='4%'?4:8)}% * 100)`});
+function tick(){const now=new Date(),d=Math.max(0,WEDDING-now),D=Math.floor(d/864e5),Hh=Math.floor(d/36e5)%24,M=Math.floor(d/6e4)%60;
+$('#dd').textContent=String(D).padStart(2,'0');$('#hh').textContent=String(Hh).padStart(2,'0');$('#mm').textContent=String(M).padStart(2,'0');
+$('#hand').style.transform=`rotate(${(now.getSeconds()+now.getMilliseconds()/1000)*6}deg)`;requestAnimationFrame(tick)}
+tick();
+/* petals */
+const pc=$('#petals'),g=pc.getContext('2d');let W,H;const ps=[];
+function sz(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;pc.width=W*d;pc.height=H*d;g.setTransform(d,0,0,d,0,0)}sz();addEventListener('resize',sz);
+for(let i=0;i<(innerWidth<700?18:34);i++)ps.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight-innerHeight,s:5+Math.random()*7,v:.4+Math.random()*.8,a:Math.random()*6,c:['#f2a23a','#f7c04a','#e8792b','#c2182b'][i%4]});
+function petals(){g.clearRect(0,0,W,H);if(!reduce)ps.forEach(p=>{p.y+=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.6;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}g.save();g.translate(p.x,p.y);g.rotate(p.a);g.fillStyle=p.c;g.globalAlpha=.75;g.beginPath();g.ellipse(0,0,p.s,p.s*.55,0,0,7);g.fill();g.restore()});requestAnimationFrame(petals)}
+petals();
+/* rsvp */
+const f=$('#f'),err=$('#err');f.addEventListener('change',()=>err.textContent='');
+f.addEventListener('submit',e=>{e.preventDefault();const ev=$$('fieldset input:checked').map(i=>i.value);if(!f.name.value.trim()){err.textContent='Please add your name.';return}if(!ev.length){err.textContent='Pick at least one event.';return}
+window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(`Namaste! RSVP for Aarav and Meera’s wedding.\nName: ${f.name.value}\nGuests: ${f.n.value}\nJoining for: ${ev.join(', ')}`),'_blank');err.textContent='Opening WhatsApp with your RSVP.'});
+</script>
+</body>
+</html>

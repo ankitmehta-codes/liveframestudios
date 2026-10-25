@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gully Club - sample site by Liveframe Studios</title>
+<meta name="description" content="Gully Club streetwear: limited drops of heavyweight tees. A sample site by Liveframe Studios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8e8e4;--ink:#111111;--soft:#555;--line:rgba(17,17,17,.15);--acid:#7dff3a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#111111}}
+:root[data-theme="dark"]{--ink:#111111}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 "Space Mono",ui-monospace,monospace;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+.D{font-family:"Archivo Black",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.top{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(16px,3vw,40px)}
+.logo{font:400 22px "Archivo Black",sans-serif;text-transform:uppercase;text-decoration:none;background:var(--acid);padding:4px 10px}
+.bagb{font:700 13px "Space Mono",monospace;background:var(--ink);color:var(--bg);border:0;padding:10px 16px;cursor:pointer;min-height:42px}
+.rail{height:400vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#gl{position:absolute;inset:0;width:100%;height:100%;cursor:pointer;touch-action:pan-y}
+.hd{position:absolute;left:clamp(16px,3vw,40px);top:88px;pointer-events:none}
+.hd h1{font:400 clamp(44px,8vw,120px)/.88 "Archivo Black",sans-serif;text-transform:uppercase;margin:0}
+.hd p{margin:12px 0 0;max-width:34ch;color:var(--soft);background:var(--bg);padding:6px 8px 6px 0;position:relative;z-index:2}
+.strip{position:absolute;left:0;right:0;bottom:0;background:var(--acid);padding:12px clamp(16px,3vw,40px);display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700;font-size:13px}
+.strip button{font:700 13px "Space Mono",monospace;background:var(--ink);color:var(--acid);border:0;min-width:44px;min-height:44px;cursor:pointer}
+.panel{position:absolute;right:clamp(16px,3vw,40px);top:50%;transform:translate(30px,-50%);width:min(340px,86vw);background:#fff;border:2px solid var(--ink);padding:22px;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;box-shadow:8px 8px 0 var(--ink)}
+.panel.on{opacity:1;transform:translate(0,-50%);pointer-events:auto}
+.panel h2{font:400 26px/1 "Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 6px}
+.sizes{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.sizes button{min-width:46px;min-height:44px;border:2px solid var(--ink);background:#fff;font:700 13px "Space Mono",monospace;cursor:pointer}
+.sizes button[aria-pressed="true"]{background:var(--ink);color:var(--acid)}
+.go{width:100%;min-height:50px;border:0;background:var(--ink);color:var(--acid);font:700 14px "Space Mono",monospace;cursor:pointer}
+.x{position:absolute;right:8px;top:8px;width:40px;height:40px;border:0;background:transparent;font-size:22px;cursor:pointer}
+.note{min-height:20px;font-size:12px;margin:8px 0 0}
+section.s{padding:clamp(80px,10vw,140px) 0;border-top:2px solid var(--ink)}
+h2.big{font:400 clamp(40px,7vw,100px)/.9 "Archivo Black",sans-serif;text-transform:uppercase;margin:0 0 40px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:2px solid var(--ink)}
+.how div{padding:26px;border-right:2px solid var(--ink)}.how div:last-child{border-right:0}
+.how b{font:400 44px "Archivo Black",sans-serif;display:block;background:var(--acid);width:max-content;padding:0 8px;margin-bottom:10px}
+footer{border-top:2px solid var(--ink);padding:28px 0;font-size:13px}
+@media (max-width:760px){.how div{border-right:0;border-bottom:2px solid var(--ink)}.panel{top:auto;bottom:70px;transform:translate(0,20px)}.panel.on{transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="#top">Gully Club</a><button class="bagb" type="button" id="bagTop">Bag (0)</button></header>
+<main>
+<section class="rail" id="top" aria-label="Drop 07 collection">
+<div class="stage">
+<canvas id="gl" aria-label="Clothing rail. Tap a tee to see details."></canvas>
+<div class="hd"><h1>Drop 07</h1><p>Heavyweight tees, printed in small runs. When they’re gone, they’re gone.</p></div>
+<div class="panel" id="panel" role="dialog" aria-label="Product details">
+<button class="x" id="close" type="button" aria-label="Close">×</button>
+<h2 id="pn">Tee</h2><div id="pd">240 GSM cotton, boxy fit.</div><div style="margin-top:10px;font-weight:700" id="pp">₹[price]</div>
+<div class="sizes" id="sizes"><button type="button" aria-pressed="false">S</button><button type="button" aria-pressed="false">M</button><button type="button" aria-pressed="false">L</button><button type="button" aria-pressed="false">XL</button></div>
+<button class="go" id="add" type="button">Add to bag</button><p class="note" id="note" role="status"></p>
+</div>
+<div class="strip"><button type="button" id="prev" aria-label="Previous tee">←</button><span id="cap">Scroll or tap a tee</span><button type="button" id="next" aria-label="Next tee">→</button></div>
+</div>
+</section>
+<section class="s"><div class="wrap">
+<h2 class="big">How to cop</h2>
+<div class="how"><div><b>01</b>Pick your tee and size from the rail.</div><div><b>02</b>Send your bag to us on WhatsApp.</div><div><b>03</b>Pay by UPI and we ship in 2 days.</div></div>
+<p style="margin-top:28px"><button class="go" id="order" type="button" style="width:auto;padding:0 24px">Send bag on WhatsApp</button> <span id="onote" role="status"></span></p>
+</div></section>
+</main>
+<footer><div class="wrap">Gully Club is a sample site. Built by Liveframe Studios.</div></footer>
+<script src="/assets/js/three.min.js"></script>
+<script src="/assets/js/gsap.min.js"></script>
+<script src="/assets/js/ScrollTrigger.min.js"></script>
+<script src="/assets/js/lenis.min.js"></script>
+<script>
+const WA="910000000000";
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+gsap.registerPlugin(ScrollTrigger);
+let lenis=null;if(!reduce&&window.Lenis){try{lenis=new Lenis({lerp:.09});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0)}catch(e){}}
+const TEES=[{n:'Gully Club Classic',c:0xf4f2ec,ink:'#111',t:'GULLY',d:'240 GSM cotton, boxy fit, puff print.'},{n:'Midnight Chai',c:0x15161a,ink:'#7dff3a',t:'CHAI',d:'Black heavyweight with acid green print.'},{n:'Monsoon',c:0x6f8fb3,ink:'#f4f2ec',t:'RAIN',d:'Washed blue, oversized, back print.'},{n:'Signal',c:0xf2d23c,ink:'#111',t:'HONK',d:'Yellow like a rickshaw. Hard to miss.'},{n:'Brick',c:0xb4532f,ink:'#f4f2ec',t:'GULLY',d:'Faded brick red, vintage wash.'},{n:'Ghost',c:0xcfd2cc,ink:'#7dff3a',t:'OFFLINE',d:'Stone grey with glow print.'}];
+const N=TEES.length,GAP=2.3;
+let R=null,scene,cam,items=[];
+try{R=new THREE.WebGLRenderer({canvas:$('#gl'),antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=.9}catch(e){R=null}
+function teeShape(){const s=new THREE.Shape();s.moveTo(-.32,.9);s.quadraticCurveTo(0,.72,.32,.9);s.lineTo(.62,.8);s.lineTo(1.02,.42);s.lineTo(.82,.16);s.lineTo(.6,.32);s.lineTo(.6,-.95);s.quadraticCurveTo(0,-1.0,-.6,-.95);s.lineTo(-.6,.32);s.lineTo(-.82,.16);s.lineTo(-1.02,.42);s.lineTo(-.62,.8);s.closePath();return s}
+function printTex(txt,ink){const c=document.createElement('canvas');c.width=512;c.height=256;const g=c.getContext('2d');g.fillStyle=ink;g.textAlign='center';g.textBaseline='middle';g.font='400 120px "Archivo Black", Impact, sans-serif';g.fillText(txt,256,128,480);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;return t}
+if(R){
+scene=new THREE.Scene();cam=new THREE.PerspectiveCamera(32,1,.1,100);cam.position.set(0,.6,7.2);
+scene.add(new THREE.HemisphereLight(0xffffff,0x888880,.8));const k=new THREE.DirectionalLight(0xffffff,1.6);k.position.set(3,5,6);scene.add(k);
+const steel=new THREE.MeshStandardMaterial({color:0x9a9a9a,metalness:1,roughness:.3});
+const rail=new THREE.Mesh(new THREE.CylinderGeometry(.04,.04,N*GAP+4,24),steel);rail.rotation.z=Math.PI/2;rail.position.set((N-1)*GAP/2,1.55,0);scene.add(rail);
+const geo=new THREE.ExtrudeGeometry(teeShape(),{depth:.12,bevelEnabled:true,bevelThickness:.04,bevelSize:.03,bevelSegments:3,curveSegments:16});geo.translate(0,0,-.06);
+const hg=new THREE.MeshStandardMaterial({color:0x2b2b2b,roughness:.5});
+TEES.forEach((t,i)=>{const piv=new THREE.Group();piv.position.set(i*GAP,1.55,0);
+const hook=new THREE.Mesh(new THREE.TorusGeometry(.12,.02,8,24,Math.PI*1.4),steel);hook.rotation.z=-Math.PI*.2;hook.position.y=-.02;piv.add(hook);
+const bar=new THREE.Mesh(new THREE.CylinderGeometry(.025,.025,1.3,12),hg);bar.rotation.z=Math.PI/2;bar.position.y=-.42;piv.add(bar);
+const neck=new THREE.Mesh(new THREE.CylinderGeometry(.02,.02,.32,8),steel);neck.position.y=-.24;piv.add(neck);
+const body=new THREE.Group();body.position.y=-1.38;piv.add(body);
+const tee=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({color:new THREE.Color(t.c).convertSRGBToLinear(),roughness:.85}));tee.userData.i=i;body.add(tee);
+const pr=new THREE.Mesh(new THREE.PlaneGeometry(.9,.45),new THREE.MeshStandardMaterial({map:printTex(t.t,t.ink),transparent:true,roughness:.9}));pr.position.set(0,.2,.11);pr.userData.i=i;body.add(pr);
+scene.add(piv);items.push({piv,body,tee,swing:0,vel:0,z:0,ry:0})})}
+let P=0,tP=0,vel=0,sel=-1;
+ScrollTrigger.create({trigger:'.rail',start:'top top',end:'bottom bottom',onUpdate:s=>{tP=s.progress;vel=s.getVelocity()/2500}});
+function size(){if(!R)return;const st=$('.stage');R.setSize(st.clientWidth,st.clientHeight,false);cam.aspect=st.clientWidth/st.clientHeight;cam.position.z=cam.aspect<.8?11:7.2;cam.updateProjectionMatrix()}
+addEventListener('resize',()=>{size();ScrollTrigger.refresh()});size();
+const cap=$('#cap'),panel=$('#panel');
+function focusIdx(){return Math.round(P*(N-1))}
+function open(i){sel=i;const t=TEES[i];$('#pn').textContent=t.n;$('#pd').textContent=t.d;$$('#sizes button').forEach(b=>b.setAttribute('aria-pressed','false'));$('#note').textContent='';panel.classList.add('on')}
+function close(){sel=-1;panel.classList.remove('on')}
+$('#close').onclick=close;
+function goTo(i){i=Math.max(0,Math.min(N-1,i));const st=ScrollTrigger.getAll().find(s=>s.trigger===$('.rail'));const y=st.start+(st.end-st.start)*i/(N-1);lenis?lenis.scrollTo(y):scrollTo(0,y)}
+$('#prev').onclick=()=>goTo(focusIdx()-1);$('#next').onclick=()=>goTo(focusIdx()+1);
+const ray=new THREE.Raycaster(),mv=new THREE.Vector2();
+$('#gl').addEventListener('click',e=>{if(!R)return;const r=e.target.getBoundingClientRect();mv.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(mv,cam);const hit=ray.intersectObjects(items.flatMap(it=>it.body.children));if(hit.length)open(hit[0].object.userData.i);else close()});
+let size_='';$$('#sizes button').forEach(b=>b.onclick=()=>{$$('#sizes button').forEach(o=>o.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');size_=b.textContent;$('#note').textContent=''});
+const bag=[];
+$('#add').onclick=()=>{if(!size_){$('#note').textContent='Pick a size first.';return}bag.push(TEES[sel].n+' ('+size_+')');$('#bagTop').textContent='Bag ('+bag.length+')';$('#note').textContent='Added. Keep browsing or send your bag.';size_=''};
+$('#bagTop').onclick=()=>{lenis?lenis.scrollTo('.s'):$('.s').scrollIntoView()};
+$('#order').onclick=()=>{if(!bag.length){$('#onote').textContent='Your bag is empty.';return}window.open('https://wa.me/'+WA+'?text='+encodeURIComponent('Hi Gully Club, I’d like to order:\n'+bag.map(x=>'- '+x).join('\n')),'_blank');$('#onote').textContent='Opening WhatsApp.'};
+let lt=0;function loop(t){const dt=Math.min(.1,(t-lt)/1000||.016);lt=t;const ease=reduce?1:1-Math.pow(.9,dt*60);P+=(tP-P)*ease;
+if(R){const camX=P*(N-1)*GAP;cam.position.x+=(camX-cam.position.x)*ease;cam.lookAt(cam.position.x,.55,0);
+items.forEach((it,i)=>{const acc=-vel*0.6-it.swing*0.08;it.vel=(it.vel+acc*dt*60)*0.94;it.swing+=it.vel*dt*6;if(reduce)it.swing=0;it.piv.rotation.z=clamp(it.swing,-.5,.5);
+const tz=sel===i?1.4:0,try_=sel===i?t/1000*.8:0;it.z+=(tz-it.z)*ease;it.piv.position.z=it.z;it.body.rotation.y=sel===i?try_:it.body.rotation.y*(1-ease);
+it.tee.material.opacity=1});vel*=.9;R.render(scene,cam)}
+cap.textContent=sel>=0?TEES[sel].n:(String(focusIdx()+1).padStart(2,'0')+' / '+String(N).padStart(2,'0')+'  '+TEES[focusIdx()].n);
+requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
